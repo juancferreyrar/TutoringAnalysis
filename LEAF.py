@@ -35,7 +35,7 @@ def generate_course_mapping(df):
 
 def load_data(sheet_url):
     scope = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-    creds_json = st.secrets["google_service_account"]
+    creds_json = st.secrets["google_service_account"] 
     creds = Credentials.from_service_account_info(creds_json, scopes=scope)
     client = gspread.authorize(creds)
     sheet = client.open_by_url(sheet_url).sheet1
@@ -216,10 +216,10 @@ def display_time_visualizations(df):
 
 
 def main():
-    st.title('CIS Sanxbox Data Analysis')
+    st.title('LEAF Lab Data Analysis')
     headers = ['Timestamp', 'Your Name', 'Where are you?', 'Course', 'Tutor / Reason']
 
-    sheet_url = 'https://docs.google.com/spreadsheets/d/1sS1pjcANBCYo-CPnhytJD1akY_e7N0Mpver0hr9XkG4/edit?resourcekey#gid=661815674'
+    sheet_url = 'https://docs.google.com/spreadsheets/d/1ZPIRFDXGNYPV56m3TMMrzSvH2bFiRMJ_5tazDX-EXBI/edit?resourcekey#gid=428117774'
 
     df = load_data(sheet_url)
 
@@ -255,3 +255,4 @@ if __name__ == '__main__':
     st.set_page_config(page_title='Tutoring Center Data', layout='wide')
     main()
 #python -m streamlit run "C:\\Users\\jcfer\\OneDrive - Bentley University\\pythonProject\\TutorAnalysis\\TutorAnalysisNavigation.py"
+
