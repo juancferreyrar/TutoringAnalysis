@@ -35,7 +35,7 @@ def generate_course_mapping(df):
 
 def load_data(sheet_url):
     scope = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-    creds_json = json.loads(os.getenv('GOOGLE_APPLICATION_CREDENTIALS_JSON'))
+    creds_json = st.secrets["google_service_account"] 
     creds = Credentials.from_service_account_info(creds_json, scopes=scope)
     client = gspread.authorize(creds)
     sheet = client.open_by_url(sheet_url).sheet1
