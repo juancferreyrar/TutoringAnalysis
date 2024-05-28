@@ -5,3 +5,4 @@ seaborn
 plotly
 gspread
 oauth2client
+json
