@@ -6,6 +6,7 @@ import plotly.express as px
 from datetime import datetime
 import gspread
 import os
+import json
 from google.oauth2.service_account import Credentials
 
 
@@ -31,10 +32,11 @@ def generate_course_mapping(df):
 
     return mapping
 
+
 def load_data(sheet_url):
     scope = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-    creds = Credentials.from_service_account_file(
-        os.getenv('GOOGLE_APPLICATION_CREDENTIALS'), scopes=scope)
+    creds_json = json.loads(os.getenv('GOOGLE_APPLICATION_CREDENTIALS_JSON'))
+    creds = Credentials.from_service_account_info(creds_json, scopes=scope)
     client = gspread.authorize(creds)
     sheet = client.open_by_url(sheet_url).sheet1
     all_values = sheet.get_all_values()
