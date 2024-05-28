@@ -219,7 +219,7 @@ def main():
     st.title('LEAF Lab Data Analysis')
     headers = ['Timestamp', 'Your Name', 'Where are you?', 'Course', 'Tutor / Reason']
 
-    sheet_url = 'https://docs.google.com/spreadsheets/d/1ZPIRFDXGNYPV56m3TMMrzSvH2bFiRMJ_5tazDX-EXBI/edit?resourcekey#gid=428117774'
+    sheet_url = 'https://docs.google.com/spreadsheets/d/1sS1pjcANBCYo-CPnhytJD1akY_e7N0Mpver0hr9XkG4/edit?resourcekey#gid=661815674'
 
     df = load_data(sheet_url)
 
