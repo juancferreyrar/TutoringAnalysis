@@ -217,7 +217,7 @@ def display_time_visualizations(df):
 
 def main():
     st.title('CIS Sanxbox Data Analysis')
-    st.write("Welcome to the CIS Sandbox Data Analyis, this app will be updated daily automatically as students register using the QR code system in the CIS Sandbox located in Smith 214. Please feel free to go through the tabs to find out more about our analytics and our performance in helping students through the semester.
+    st.write("Welcome to the CIS Sandbox Data Analyis, this app will be updated daily automatically as students register using the QR code system in the CIS Sandbox located in Smith 214. Please feel free to go through the tabs to find out more about our analytics and our performance in helping students through the semester.")
     headers = ['Timestamp', 'Your Name', 'Where are you?', 'Course', 'Tutor / Reason']
 
     sheet_url = 'https://docs.google.com/spreadsheets/d/1ZPIRFDXGNYPV56m3TMMrzSvH2bFiRMJ_5tazDX-EXBI/edit?resourcekey#gid=428117774'
